@@ -1,0 +1,506 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    padding: 35px 20px;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #090b10;
+    color: #f5f5f5;
+}
+
+
+/* MAIN GRID */
+
+.bento {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 180px;
+
+    gap: 15px;
+}
+
+
+/* COMMON CARD */
+
+.card {
+    position: relative;
+
+    padding: 22px;
+
+    background: #151820;
+
+    border: 1px solid #292d37;
+    border-radius: 22px;
+
+    overflow: hidden;
+
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+
+    border-color: #8dffb5;
+}
+
+
+/* COMMON TEXT */
+
+.label {
+    margin-bottom: 15px;
+
+    color: #747b88;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+}
+
+.description {
+    margin-top: 15px;
+
+    color: #9ca1aa;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+
+/* PROFILE */
+
+.profile {
+    grid-column: span 2;
+    grid-row: span 2;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background:
+        radial-gradient(
+            circle at top right,
+            #24463b,
+            transparent 40%
+        ),
+        #151820;
+}
+
+.status {
+    width: fit-content;
+
+    padding: 7px 10px;
+
+    background: #1e302a;
+
+    border-radius: 20px;
+
+    color: #8dffb5;
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+}
+
+.status span {
+    display: inline-block;
+
+    width: 7px;
+    height: 7px;
+
+    margin-right: 6px;
+
+    background: #8dffb5;
+
+    border-radius: 50%;
+
+    box-shadow: 0 0 10px #8dffb5;
+}
+
+.profile h1 {
+    margin: 8px 0 12px;
+
+    font-size: 58px;
+
+    line-height: 0.9;
+}
+
+.profile h1 strong {
+    color: #8dffb5;
+}
+
+.profile h3 {
+    color: #a0a5ae;
+
+    font-size: 15px;
+
+    font-weight: normal;
+}
+
+.tags {
+    display: flex;
+
+    gap: 8px;
+
+    flex-wrap: wrap;
+}
+
+.tags span {
+    padding: 7px 12px;
+
+    background: #20242c;
+
+    border-radius: 20px;
+
+    color: #b1b5bd;
+
+    font-size: 11px;
+}
+
+
+/* FOCUS */
+
+.focus {
+    background:
+        linear-gradient(
+            135deg,
+            #302444,
+            #18141f
+        );
+}
+
+.focus h2 {
+    font-size: 29px;
+
+    line-height: 1.05;
+}
+
+.number {
+    position: absolute;
+
+    right: 18px;
+    bottom: 12px;
+
+    color: #7d668f;
+
+    font-size: 45px;
+
+    font-weight: bold;
+}
+
+
+/* STATS */
+
+.stats {
+    grid-row: span 2;
+}
+
+.stat {
+    padding: 13px 0;
+
+    border-bottom: 1px solid #292d37;
+}
+
+.stat:last-child {
+    border: none;
+}
+
+.stat h2 {
+    color: #8dffb5;
+
+    font-size: 31px;
+}
+
+.stat span {
+    color: #888f9b;
+
+    font-size: 12px;
+}
+
+
+/* SKILLS */
+
+.skills {
+    grid-column: span 2;
+}
+
+.skill {
+    margin-top: 13px;
+}
+
+.skill > div:first-child {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 6px;
+
+    font-size: 12px;
+
+    color: #c3c6cc;
+}
+
+.bar {
+    height: 6px;
+
+    background: #2a2f38;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+.bar span {
+    display: block;
+
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            #8dffb5,
+            #51b7ff
+        );
+
+    border-radius: 10px;
+}
+
+.html {
+    width: 90%;
+}
+
+.css {
+    width: 85%;
+}
+
+.js {
+    width: 68%;
+}
+
+
+/* PROJECT */
+
+.project {
+    background: #8dffb5;
+
+    color: #101510;
+}
+
+.badge {
+    display: inline-block;
+
+    padding: 5px 8px;
+
+    background: #183024;
+
+    border-radius: 20px;
+
+    color: #8dffb5;
+
+    font-size: 9px;
+}
+
+.project h2 {
+    margin: 14px 0 8px;
+
+    font-size: 29px;
+
+    line-height: 1;
+}
+
+.project p {
+    width: 85%;
+
+    color: #315645;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+}
+
+.arrow {
+    position: absolute;
+
+    right: 18px;
+    bottom: 12px;
+
+    font-size: 30px;
+}
+
+
+/* ACTIVITY */
+
+.activity {
+    grid-column: span 2;
+}
+
+.activity-head {
+    display: flex;
+
+    justify-content: space-between;
+}
+
+.activity-head > span {
+    color: #8dffb5;
+
+    font-size: 11px;
+}
+
+.chart {
+    height: 115px;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    gap: 10px;
+}
+
+.chart div {
+    flex: 1;
+
+    height: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.chart i {
+    width: 100%;
+    max-width: 26px;
+
+    background:
+        linear-gradient(
+            #8dffb5,
+            #287454
+        );
+
+    border-radius: 5px 5px 2px 2px;
+}
+
+.chart span {
+    margin-top: 6px;
+
+    color: #727986;
+
+    font-size: 9px;
+}
+
+
+/* GOAL */
+
+.goal {
+    background:
+        linear-gradient(
+            140deg,
+            #153543,
+            #10191e
+        );
+}
+
+.goal h2 {
+    margin: 5px 0 12px;
+
+    font-size: 31px;
+
+    line-height: 1.05;
+}
+
+.goal h2 span {
+    color: #5bdcff;
+}
+
+.goal > p:last-child {
+    color: #89919b;
+
+    font-size: 12px;
+}
+
+
+/* TABLET */
+
+@media (max-width: 800px) {
+
+    .bento {
+        grid-template-columns: repeat(2, 1fr);
+
+        grid-auto-rows: auto;
+    }
+
+    .card {
+        min-height: 180px;
+    }
+
+    .profile {
+        grid-column: span 2;
+
+        min-height: 370px;
+    }
+
+    .stats {
+        grid-row: span 1;
+    }
+
+    .skills,
+    .activity {
+        grid-column: span 2;
+    }
+}
+
+
+/* MOBILE */
+
+@media (max-width: 520px) {
+
+    body {
+        padding: 15px;
+    }
+
+    .bento {
+        grid-template-columns: 1fr;
+    }
+
+    .card,
+    .profile,
+    .skills,
+    .activity {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+
+    .profile {
+        min-height: 350px;
+    }
+
+    .profile h1 {
+        font-size: 48px;
+    }
+
+    .stats {
+        min-height: 300px;
+    }
+
+    .skills {
+        min-height: 250px;
+    }
+
+    .activity {
+        min-height: 230px;
+    }
+}
